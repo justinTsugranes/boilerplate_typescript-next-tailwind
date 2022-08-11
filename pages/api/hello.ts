@@ -1,13 +1,9 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+/* eslint-disable import/no-anonymous-default-export */
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {
   name: string
 }
-
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+export default (req: NextApiRequest, res: NextApiResponse<Data>): void => {
   res.status(200).json({ name: 'John Doe' })
 }
