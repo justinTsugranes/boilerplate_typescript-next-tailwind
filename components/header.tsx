@@ -2,17 +2,16 @@ import { NextSeo } from 'next-seo'
 import { useRouter } from 'next/router'
 
 export default function Header(): JSX.Element {
-  const title = 'Gourav Goyal'
-  const desc =
-    "I'm a tech founder, digital nomad, and a fun guy to hang around with. I like to build things that others find helpful."
+  const title = 'Title'
+  const desc = 'Write a description that is no more than 150 characters.'
   const ogImgRelativePath = '/og.png'
 
-  const siteURL = 'https://gourav.io'
+  const siteURL = 'https://example.com'
   const ogImageURL = `${siteURL}${ogImgRelativePath}`
   const pathName = useRouter().pathname
   const pageURL = pathName === '/' ? siteURL : siteURL + pathName
-  const twitterHandle = '@GorvGoyl'
-  const siteName = 'Gourav.io'
+  const twitterHandle = '@YOURTWITTERHANDLE'
+  const siteName = 'example.com'
 
   return (
     <NextSeo
@@ -30,7 +29,7 @@ export default function Header(): JSX.Element {
             url: ogImageURL,
             width: 1200,
             height: 630,
-            alt: 'Gourav.io - personal site and blog',
+            alt: 'Enter alt text for image',
           },
         ],
         site_name: siteName,
